@@ -1,0 +1,37 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.dvd.android.xposed.mousepointerchanger">
+
+    <application android:allowBackup="true"
+                 android:label="Mouse Pointer Changer - Xposed"
+                 android:icon="@mipmap/ic_launcher">
+        <activity
+            android:name=".MainActivity"
+            android:label="Mouse Pointer Changer - Xposed">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="de.robv.android.xposed.category.MODULE_SETTINGS"/>
+            </intent-filter>
+        </activity>
+        <activity-alias
+            android:name="com.dvd.android.xposed.mousepointerchanger.MainActivityAlias"
+            android:enabled="true"
+            android:label="Mouse Pointer Changer - Xposed"
+            android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="Easy module which change mouse pointer" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="54" />
+    </application>
+
+</manifest>

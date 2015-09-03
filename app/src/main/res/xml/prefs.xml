@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.dvd.android.xposed.mousepointerchanger.ImageListPreference
+        android:key="cursor"
+        android:title="Choose cursor"/>
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="hide_launcher"
+        android:title="Hide in launcher"/>
+
+</PreferenceScreen>
